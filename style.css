@@ -1,0 +1,80 @@
+/* Custom Styles for Easy Clean Laundry */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Animations */
+.hover-card-transition {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card-transition:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Floating WA Button */
+.floating-wa {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 50;
+    transition: transform 0.3s ease;
+}
+
+.floating-wa:hover {
+    transform: scale(1.1);
+}
+
+.floating-wa-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    font-size: 30px;
+    text-decoration: none;
+}
+
+/* FAQ Accordion */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-answer.open {
+    max-height: 300px;
+    transition: max-height 0.5s ease-in;
+}
+
+.faq-icon {
+    transition: transform 0.3s ease;
+}
+
+.faq-icon.open {
+    transform: rotate(180deg);
+}
+
+/* Gradient Text */
+.text-gradient {
+    background: linear-gradient(135deg, #0284c7, #0d9488);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Custom Shadows for modern look */
+.shadow-soft {
+    box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08);
+}

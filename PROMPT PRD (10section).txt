@@ -1,0 +1,591 @@
+# PROMPT PEMBUATAN PRODUCT BRIEF WEBSITE
+
+Anda adalah seorang **Product Manager**, **UI/UX Strategist**, dan **Senior Web Planner**.
+
+Buatkan saya **PRODUCT BRIEF lengkap** untuk pembuatan website dengan detail berikut:
+
+## 1. Informasi Dasar Website
+
+**Nama Website/Brand:** [ISI NAMA WEBSITE]
+**Jenis Website:** [Contoh: website laundry, website klinik, website restoran, website travel planner, website tiket bioskop, website toko online]
+**Target User:** [ISI TARGET USER]
+**Tujuan Website:** [ISI TUJUAN UTAMA WEBSITE]
+**Masalah yang Ingin Diselesaikan:** [ISI MASALAH USER]
+**Solusi yang Ditawarkan:** [ISI SOLUSI WEBSITE]
+**Teknologi yang Diinginkan:** [Contoh: HTML, CSS, JavaScript, Tailwind CSS, React, Next.js, Firebase, Supabase]
+
+---
+
+## 2. Tugas Utama
+
+Susun product brief dalam format Markdown yang rapi, lengkap, detail, dan mudah dipahami oleh tim development.
+
+Product brief harus dapat digunakan sebagai panduan utama sebelum masuk ke tahap:
+
+1. Desain UI/UX
+2. Pembuatan wireframe
+3. Pembuatan prototype
+4. Development website
+5. Testing website
+6. Deployment website
+
+---
+
+## 3. Struktur Product Brief yang Wajib Dibuat
+
+Buat product brief dengan bagian-bagian berikut:
+
+# PRODUCT BRIEF
+
+# [NAMA WEBSITE]
+
+---
+
+## 1. Ringkasan Produk
+
+Jelaskan secara singkat:
+
+1. Apa nama website-nya.
+2. Website ini digunakan untuk apa.
+3. Siapa target penggunanya.
+4. Masalah apa yang diselesaikan.
+5. Solusi utama yang diberikan.
+6. Nilai utama yang ditawarkan kepada user.
+
+---
+
+## 2. Latar Belakang
+
+Jelaskan latar belakang mengapa website ini perlu dibuat.
+
+Bahas:
+
+1. Kondisi atau masalah yang dialami target user.
+2. Kebiasaan user sebelum menggunakan website.
+3. Kesulitan user dalam proses manual.
+4. Peluang digitalisasi melalui website.
+5. Alasan website ini penting dibuat.
+
+---
+
+## 3. Visi Produk
+
+Tuliskan visi produk dalam bentuk narasi singkat.
+
+Visi harus menjelaskan arah besar website dan manfaat jangka panjang bagi user.
+
+---
+
+## 4. Tujuan Produk
+
+Tuliskan tujuan website secara detail.
+
+Minimal berisi:
+
+1. Tujuan bisnis.
+2. Tujuan untuk user.
+3. Tujuan dari sisi layanan.
+4. Tujuan dari sisi komunikasi.
+5. Tujuan dari sisi konversi.
+6. Tujuan dari sisi pengembangan jangka panjang.
+
+---
+
+## 5. Target User
+
+Jelaskan target user website.
+
+Buat minimal 4 kategori target user.
+
+Untuk setiap target user, jelaskan:
+
+1. Siapa mereka.
+2. Masalah yang mereka alami.
+3. Kebutuhan utama mereka.
+4. Bagaimana website membantu mereka.
+
+---
+
+## 6. Value Proposition
+
+Jelaskan nilai utama yang diberikan website kepada user.
+
+Minimal berisi:
+
+1. Kemudahan.
+2. Kecepatan.
+3. Kepercayaan.
+4. Efisiensi.
+5. Profesionalitas.
+6. Kualitas layanan.
+7. Kemudahan komunikasi.
+8. Kemudahan transaksi atau pemesanan.
+
+---
+
+# STRUKTUR SECTION WEBSITE
+
+Product brief wajib menjelaskan 10 section utama website berikut:
+
+---
+
+## 7. Header / Navbar Section
+
+Jelaskan rancangan Header atau Navbar.
+
+Wajib memuat:
+
+1. Logo atau nama brand.
+2. Menu navigasi utama.
+3. Tombol CTA utama.
+4. Versi desktop.
+5. Versi mobile.
+6. Sticky navbar jika diperlukan.
+7. Tujuan Header dalam membantu user berpindah section.
+
+Contoh menu:
+
+1. Home
+2. About
+3. Services
+4. Product / Portfolio
+5. Testimonial
+6. FAQ
+7. Contact
+
+---
+
+## 8. Hero Section
+
+Jelaskan rancangan Hero Section.
+
+Wajib memuat:
+
+1. Headline utama.
+2. Subheadline.
+3. Tombol CTA utama.
+4. Tombol CTA tambahan.
+5. Visual utama.
+6. Pesan utama yang ingin langsung dipahami user.
+7. Manfaat utama yang ditampilkan dalam 3 sampai 4 poin singkat.
+
+Buat contoh headline dan subheadline yang cocok dengan jenis website.
+
+---
+
+## 9. About Section
+
+Jelaskan rancangan About Section.
+
+Wajib memuat:
+
+1. Penjelasan singkat tentang brand atau website.
+2. Alasan website ini dibuat.
+3. Keunggulan utama brand.
+4. Nilai yang ingin diberikan kepada user.
+5. Cerita singkat atau positioning brand.
+6. Statistik pendukung jika diperlukan.
+
+Contoh statistik:
+
+1. Jumlah pelanggan.
+2. Jumlah produk atau layanan.
+3. Jumlah transaksi.
+4. Tahun pengalaman.
+5. Area layanan.
+
+---
+
+## 10. Services / Features Section
+
+Jelaskan rancangan Services atau Features Section.
+
+Wajib memuat:
+
+1. Daftar layanan atau fitur utama.
+2. Deskripsi setiap layanan atau fitur.
+3. Manfaat setiap layanan untuk user.
+4. Icon atau visual yang sesuai.
+5. Tombol aksi pada setiap fitur jika diperlukan.
+
+Minimal buat 6 layanan atau fitur utama.
+
+Format setiap fitur:
+
+1. Nama fitur/layanan.
+2. Deskripsi singkat.
+3. Manfaat untuk user.
+4. CTA kecil.
+
+---
+
+## 11. Portfolio / Product Section
+
+Jelaskan rancangan Portfolio atau Product Section.
+
+Bagian ini digunakan untuk menampilkan produk, paket layanan, portofolio pekerjaan, contoh hasil, atau kategori produk.
+
+Wajib memuat:
+
+1. Nama produk/paket/portofolio.
+2. Deskripsi singkat.
+3. Benefit utama.
+4. Target pengguna produk tersebut.
+5. CTA pada setiap produk.
+6. Tampilan dalam bentuk card grid.
+
+Minimal buat 4 item product/portfolio.
+
+Contoh bentuk:
+
+1. Paket Basic
+2. Paket Premium
+3. Paket Business
+4. Paket Custom
+
+Atau:
+
+1. Produk A
+2. Produk B
+3. Produk C
+4. Produk D
+
+Atau:
+
+1. Project Portfolio 1
+2. Project Portfolio 2
+3. Project Portfolio 3
+4. Project Portfolio 4
+
+---
+
+## 12. Testimonial Section
+
+Jelaskan rancangan Testimonial Section.
+
+Wajib memuat:
+
+1. Testimoni pelanggan.
+2. Nama pelanggan dummy.
+3. Jenis pelanggan.
+4. Komentar singkat.
+5. Rating jika diperlukan.
+6. Tampilan card testimonial.
+
+Buat minimal 3 testimoni yang realistis dan sesuai dengan jenis website.
+
+---
+
+## 13. FAQ Section
+
+Jelaskan rancangan FAQ Section.
+
+Wajib memuat:
+
+1. Pertanyaan umum user.
+2. Jawaban singkat dan jelas.
+3. Minimal 6 pertanyaan.
+4. Format accordion jika website dibuat interaktif.
+5. Pertanyaan harus menjawab keraguan user sebelum memakai layanan.
+
+Contoh kategori FAQ:
+
+1. Cara menggunakan layanan.
+2. Harga.
+3. Pemesanan.
+4. Pembayaran.
+5. Garansi atau komplain.
+6. Kontak admin.
+
+---
+
+## 14. Call To Action / CTA Section
+
+Jelaskan rancangan section CTA khusus.
+
+Wajib memuat:
+
+1. Headline ajakan.
+2. Subheadline pendukung.
+3. Tombol CTA utama.
+4. Tombol CTA tambahan.
+5. Background yang lebih menonjol.
+6. Tujuan CTA untuk mengarahkan user melakukan aksi.
+
+Contoh CTA:
+
+1. Pesan Sekarang
+2. Hubungi Admin
+3. Daftar Sekarang
+4. Konsultasi Gratis
+5. Lihat Paket
+6. Mulai Sekarang
+
+CTA Section harus dibuat terpisah, bukan hanya tombol yang tersebar di section lain.
+
+---
+
+## 15. Contact Section
+
+Jelaskan rancangan Contact Section.
+
+Wajib memuat:
+
+1. Form kontak.
+2. Nama lengkap.
+3. Nomor WhatsApp.
+4. Email.
+5. Pilihan layanan atau kebutuhan.
+6. Pesan atau catatan tambahan.
+7. Tombol kirim.
+8. Informasi kontak admin.
+9. Integrasi WhatsApp jika dibutuhkan.
+10. Integrasi email jika dibutuhkan.
+
+Jika website membutuhkan pemesanan, tambahkan field:
+
+1. Tanggal pemesanan.
+2. Jam pemesanan.
+3. Alamat.
+4. Jenis layanan.
+5. Catatan khusus.
+
+---
+
+## 16. Footer Section
+
+Jelaskan rancangan Footer.
+
+Wajib memuat:
+
+1. Nama brand.
+2. Deskripsi singkat brand.
+3. Quick links.
+4. Daftar layanan.
+5. Kontak admin.
+6. Email.
+7. Nomor WhatsApp.
+8. Social media.
+9. Copyright.
+10. Link tambahan seperti Privacy Policy dan Terms of Service jika diperlukan.
+
+---
+
+# FITUR TAMBAHAN WEBSITE
+
+## 17. Fitur Wajib MVP
+
+Tuliskan fitur wajib untuk versi pertama website.
+
+Minimal mencakup:
+
+1. Homepage lengkap.
+2. Header responsive.
+3. Hero section.
+4. About section.
+5. Services/features section.
+6. Portfolio/product section.
+7. Testimonial section.
+8. FAQ section.
+9. CTA section.
+10. Contact section.
+11. Footer.
+12. Form kontak.
+13. Responsive design.
+14. CTA aktif.
+15. Navigasi mudah digunakan.
+
+---
+
+## 18. Fitur Pengembangan Lanjutan
+
+Tuliskan fitur yang bisa dikembangkan pada tahap berikutnya.
+
+Contoh:
+
+1. Login user.
+2. Dashboard user.
+3. Admin panel.
+4. Payment gateway.
+5. Tracking order.
+6. Notifikasi email.
+7. Notifikasi WhatsApp.
+8. Chatbot AI.
+9. Database pelanggan.
+10. Laporan transaksi.
+11. Blog.
+12. Sistem review.
+
+---
+
+## 19. User Flow
+
+Buat alur penggunaan website dari sisi user.
+
+Minimal buat 3 flow:
+
+1. User mencari informasi.
+2. User memilih produk atau layanan.
+3. User menghubungi admin atau melakukan pemesanan.
+
+Setiap flow harus ditulis langkah demi langkah.
+
+---
+
+## 20. Struktur Navigasi
+
+Buat struktur navigasi website.
+
+Contoh:
+
+1. Home
+2. About
+3. Services
+4. Product / Portfolio
+5. Testimonial
+6. FAQ
+7. Contact
+
+Jelaskan tujuan setiap menu.
+
+---
+
+## 21. Kebutuhan Konten
+
+Tuliskan konten yang perlu disiapkan untuk website.
+
+Contoh:
+
+1. Logo.
+2. Headline.
+3. Deskripsi brand.
+4. Foto produk.
+5. Foto layanan.
+6. Deskripsi layanan.
+7. Harga atau paket.
+8. Testimoni.
+9. FAQ.
+10. Kontak admin.
+11. Copywriting CTA.
+12. Social media.
+
+---
+
+## 22. Rekomendasi UI/UX
+
+Berikan rekomendasi UI/UX.
+
+Minimal bahas:
+
+1. Gaya visual.
+2. Warna.
+3. Font.
+4. Layout.
+5. Card design.
+6. Button design.
+7. Responsive design.
+8. Mobile experience.
+9. Whitespace.
+10. Icon dan visual.
+
+---
+
+## 23. Teknologi yang Disarankan
+
+Berikan rekomendasi teknologi.
+
+Pisahkan menjadi:
+
+1. Frontend.
+2. Styling.
+3. Backend jika diperlukan.
+4. Database jika diperlukan.
+5. Integrasi komunikasi.
+6. Deployment.
+
+---
+
+## 24. Success Metrics
+
+Tuliskan metrik keberhasilan website.
+
+Contoh:
+
+1. Jumlah klik CTA.
+2. Jumlah pengisian form.
+3. Jumlah pesan WhatsApp.
+4. Jumlah email masuk.
+5. Jumlah transaksi.
+6. Jumlah user baru.
+7. Conversion rate.
+8. Bounce rate.
+9. Waktu kunjungan halaman.
+10. Jumlah repeat user.
+
+---
+
+## 25. Risiko Produk
+
+Tuliskan risiko yang perlu diperhatikan.
+
+Contoh:
+
+1. User bingung menggunakan website.
+2. CTA tidak terlihat.
+3. Form terlalu panjang.
+4. Website tidak responsive.
+5. Loading lambat.
+6. Kontak admin tidak aktif.
+7. Informasi harga tidak jelas.
+8. Navigasi membingungkan.
+9. Desain tidak konsisten.
+10. Tidak ada validasi form.
+
+---
+
+## 26. Acceptance Criteria
+
+Tuliskan kriteria website dianggap berhasil.
+
+Minimal berisi:
+
+1. Semua section utama tersedia.
+2. Header dapat digunakan.
+3. Hero section jelas.
+4. About section menjelaskan brand.
+5. Services/features tampil rapi.
+6. Product/portfolio section tersedia.
+7. Testimonial tersedia.
+8. FAQ tersedia.
+9. CTA section tersedia.
+10. Contact form tersedia.
+11. Footer lengkap.
+12. Website responsive.
+13. Tombol CTA berfungsi.
+14. Navigasi berjalan.
+15. Konten mudah dipahami.
+
+---
+
+## 27. Output Akhir
+
+Berikan output dalam format Markdown yang rapi.
+
+Gunakan struktur heading yang jelas.
+
+Pastikan product brief yang dibuat benar-benar dapat menjadi panduan untuk membuat website lengkap dengan section:
+
+1. Header
+2. Hero Section
+3. About Section
+4. Services / Features Section
+5. Portfolio / Product Section
+6. Testimonial Section
+7. FAQ Section
+8. Call To Action / CTA Section
+9. Contact Section
+10. Footer Section
+
+Jangan melewatkan salah satu section tersebut.
+Jangan hanya menulis ringkasan.
+Buat secara detail, praktis, dan siap digunakan oleh UI/UX designer serta developer.

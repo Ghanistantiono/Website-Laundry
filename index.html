@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Website layanan laundry kiloan, laundry sepatu, dan antar jemput dengan proses cepat, bersih, dan terpercaya.">
+    <title>Easy Clean Laundry - Laundry Modern Pickup & Delivery</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9', // Sky 500
+                        primaryDark: '#0284c7', // Sky 600
+                        secondary: '#14b8a6', // Teal 500
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <<link href="./dist/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- 1. Header / Navbar -->
+    <header id="main-header" class="fixed w-full bg-transparent z-40 transition-all duration-300">
+        <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-12">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="block hover:opacity-90 transition">
+                        <div id="logo-text"
+                            class="bg-[#113255] text-white px-3 py-1.5 flex flex-col justify-center items-start font-bold text-xl tracking-[0.2em] leading-tight rounded-sm transition-colors duration-300">
+                            <div class="flex items-center gap-1">EASY<span
+                                    class="w-8 h-[2px] bg-white inline-block logo-line transition-colors duration-300"></span>
+                            </div>
+                            <div class="flex items-center gap-1"><span
+                                    class="w-8 h-[2px] bg-white inline-block logo-line transition-colors duration-300"></span>CLEAN
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav id="desktop-nav"
+                    class="hidden lg:flex items-center text-white font-medium text-[15px] transition-colors duration-300">
+                    <a href="#home" class="hover:opacity-70 transition border-b-2 border-current pb-0.5">Home</a>
+                    <span class="mx-3 font-bold text-sm">|</span>
+                    <a href="#services" class="hover:opacity-70 transition flex items-center gap-1">Services & Pricing
+                        <i class="fa-solid fa-chevron-down text-[10px] mt-0.5"></i></a>
+                    <span class="mx-3 font-bold text-sm">|</span>
+                    <a href="#lockers" class="hover:opacity-70 transition flex items-center gap-1">Locations <i
+                            class="fa-solid fa-chevron-down text-[10px] mt-0.5"></i></a>
+                    <span class="mx-3 font-bold text-sm">|</span>
+                    <a href="#business" class="hover:opacity-70 transition">Business Solutions</a>
+                    <span class="mx-3 font-bold text-sm">|</span>
+                    <a href="#about" class="hover:opacity-70 transition">About</a>
+                    <span class="mx-3 font-bold text-sm">|</span>
+                    <a href="#faq" class="hover:opacity-70 transition">Blog</a>
+                </nav>
+
+                <!-- CTA & Mobile Toggle -->
+                <div class="flex items-center gap-4">
+                    <a href="#contact"
+                        class="hidden md:inline-flex bg-[#c8e6f5] text-[#113255] border border-[#113255] px-6 py-2.5 rounded-[2rem] font-bold text-[14px] hover:bg-[#b0d9ed] transition duration-300">
+                        Schedule Pickup
+                    </a>
+                    <button id="mobile-menu-btn"
+                        class="lg:hidden text-white transition-colors duration-300 hover:opacity-70 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full left-0 border-t">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <div class="flex justify-end pt-2">
+                    <button id="close-menu-btn" class="text-gray-500 hover:text-red-500 text-xl"><i
+                            class="fa-solid fa-xmark"></i></button>
+                </div>
+                <a href="#home"
+                    class="mobile-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Home</a>
+                <a href="#services"
+                    class="mobile-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Services</a>
+                <a href="#how-it-works"
+                    class="mobile-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">How
+                    It Works</a>
+                <a href="#pricing"
+                    class="mobile-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Pricing</a>
+                <a href="#lockers"
+                    class="mobile-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Lockers</a>
+                <a href="#business"
+                    class="mobile-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Business</a>
+                <a href="#faq"
+                    class="mobile-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">FAQ</a>
+                <a href="#contact"
+                    class="mobile-link block px-3 py-2 text-base font-medium text-primary hover:bg-gray-50 rounded-md">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden min-h-[80vh] flex items-center">
+        <!-- Video Background -->
+        <video autoplay loop muted playsinline
+            class="absolute inset-0 w-full h-full object-cover z-0 filter brightness-[0.4]">
+            <source src="laundry.mp4" type="video/mp4">
+        </video>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span
+                        class="text-blue-300 font-semibold tracking-wider uppercase text-sm mb-4 block drop-shadow-md">Premium
+                        Laundry Service</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white drop-shadow-lg">
+                        Laundry Modern, <br> <span class="text-blue-200">Bersih, Cepat,</span> <br> dan Praktis
+                    </h1>
+                    <p class="text-lg text-gray-100 mb-8 max-w-lg leading-relaxed drop-shadow-md">
+                        Easy Clean membantu Anda mencuci pakaian tanpa harus datang ke tempat laundry. Jadwalkan pickup,
+                        kami jemput, bersihkan, dan antar kembali pakaian Anda.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact"
+                            class="bg-[#c8e6f5] text-[#113255] text-center px-8 py-3.5 rounded-full font-bold hover:bg-[#b0d9ed] shadow-lg hover:-translate-y-1 transition duration-300">
+                            Schedule Pickup
+                        </a>
+                        <a href="https://wa.me/6287878851973?text=Halo%20Admin%20Easy%20Clean%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20laundry."
+                            target="_blank"
+                            class="bg-white/10 backdrop-blur-md text-white border border-white/30 text-center px-8 py-3.5 rounded-full font-semibold hover:bg-white/20 transition duration-300 flex justify-center items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Hubungi WhatsApp
+                        </a>
+                    </div>
+
+                    <div class="mt-10">
+                        <p class="text-sm text-gray-200 font-semibold mb-3 drop-shadow-md tracking-wide">Download App
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#" class="hover:opacity-80 transition hover:-translate-y-1 transform duration-300">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                                    alt="Download on the App Store" class="h-10">
+                            </a>
+                            <a href="#" class="hover:opacity-80 transition hover:-translate-y-1 transform duration-300">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                    alt="Get it on Google Play" class="h-10">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative hidden md:block">
+                    <div
+                        class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 shadow-2xl relative z-10">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div
+                                class="bg-white/95 p-6 rounded-2xl shadow-sm text-center hover:-translate-y-1 transition-transform">
+                                <div
+                                    class="w-12 h-12 mx-auto bg-blue-100 text-primary rounded-full flex items-center justify-center mb-4">
+                                    <i class="fa-solid fa-shirt text-xl"></i>
+                                </div>
+                                <h3 class="font-semibold text-gray-800">Wash & Fold</h3>
+                            </div>
+                            <div
+                                class="bg-white/95 p-6 rounded-2xl shadow-sm text-center mt-8 hover:-translate-y-1 transition-transform">
+                                <div
+                                    class="w-12 h-12 mx-auto bg-teal-100 text-secondary rounded-full flex items-center justify-center mb-4">
+                                    <i class="fa-solid fa-socks text-xl"></i>
+                                </div>
+                                <h3 class="font-semibold text-gray-800">Dry Cleaning</h3>
+                            </div>
+                            <div
+                                class="bg-white/95 p-6 rounded-2xl shadow-sm text-center -mt-8 hover:-translate-y-1 transition-transform">
+                                <div
+                                    class="w-12 h-12 mx-auto bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mb-4">
+                                    <i class="fa-solid fa-shoe-prints text-xl"></i>
+                                </div>
+                                <h3 class="font-semibold text-gray-800">Shoe Care</h3>
+                            </div>
+                            <div
+                                class="bg-white/95 p-6 rounded-2xl shadow-sm text-center hover:-translate-y-1 transition-transform">
+                                <div
+                                    class="w-12 h-12 mx-auto bg-orange-100 text-orange-500 rounded-full flex items-center justify-center mb-4">
+                                    <i class="fa-solid fa-truck-fast text-xl"></i>
+                                </div>
+                                <h3 class="font-semibold text-gray-800">Free Pickup</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Promo Banner -->
+    <section class="bg-gradient-to-r from-primaryDark to-primary py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-3 text-white">
+                    <span class="bg-white/20 p-2 rounded-full"><i class="fa-solid fa-gift"></i></span>
+                    <p class="font-medium text-sm md:text-base">Promo pelanggan baru: nikmati layanan laundry pickup &
+                        delivery yang lebih praktis untuk pesanan pertama Anda.</p>
+                </div>
+                <a href="https://wa.me/6287878851973?text=Halo%20Admin%2C%20saya%20ingin%20klaim%20promo%20pelanggan%20baru."
+                    target="_blank"
+                    class="whitespace-nowrap bg-white text-primary px-5 py-2 rounded-full font-semibold text-sm hover:bg-gray-100 transition">
+                    Klaim Promo via WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Services Overview -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Layanan Unggulan Kami</h2>
+                <p class="text-gray-600 text-lg">Solusi kebersihan lengkap untuk pakaian dan tekstil Anda, ditangani
+                    oleh profesional.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover-card-transition group">
+                    <div
+                        class="w-14 h-14 bg-blue-50 text-primary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-shirt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Wash & Fold</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Layanan cuci dan lipat untuk pakaian harian agar
+                        bersih, wangi, rapi, dan siap disimpan.</p>
+                    <a href="#contact"
+                        class="text-primary font-semibold text-sm hover:text-primaryDark flex items-center gap-1">Pesan
+                        Layanan <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover-card-transition group">
+                    <div
+                        class="w-14 h-14 bg-teal-50 text-secondary rounded-2xl flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-user-tie text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Dry Cleaning</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Layanan pembersihan profesional untuk jas, dress,
+                        blazer, dan pakaian berbahan khusus.</p>
+                    <a href="#contact"
+                        class="text-primary font-semibold text-sm hover:text-primaryDark flex items-center gap-1">Pesan
+                        Layanan <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover-card-transition group">
+                    <div
+                        class="w-14 h-14 bg-orange-50 text-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-500 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-shoe-prints text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Shoe Cleaning</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Layanan pembersihan sepatu untuk menghilangkan
+                        kotoran, bau, dan menjaga tampilan sepatu tetap segar.</p>
+                    <a href="#contact"
+                        class="text-primary font-semibold text-sm hover:text-primaryDark flex items-center gap-1">Pesan
+                        Layanan <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover-card-transition group">
+                    <div
+                        class="w-14 h-14 bg-indigo-50 text-indigo-500 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-indigo-500 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-bed text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Bedding & Linen</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Layanan pencucian sprei, bed cover, towel, linen, dan
+                        kebutuhan rumah tangga lainnya.</p>
+                    <a href="#contact"
+                        class="text-primary font-semibold text-sm hover:text-primaryDark flex items-center gap-1">Pesan
+                        Layanan <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover-card-transition group">
+                    <div
+                        class="w-14 h-14 bg-yellow-50 text-yellow-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-500 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-box-open text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Laundry Lockers</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Layanan smart locker untuk apartemen dan gedung agar
+                        penghuni dapat drop-off dan pickup dengan fleksibel.</p>
+                    <a href="#contact"
+                        class="text-primary font-semibold text-sm hover:text-primaryDark flex items-center gap-1">Pesan
+                        Layanan <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover-card-transition group">
+                    <div
+                        class="w-14 h-14 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-600 group-hover:text-white transition duration-300">
+                        <i class="fa-solid fa-building text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Commercial Laundry</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Layanan laundry untuk kantor, gym, salon, spa, hotel
+                        kecil, klinik, dan bisnis hospitality.</p>
+                    <a href="#contact"
+                        class="text-primary font-semibold text-sm hover:text-primaryDark flex items-center gap-1">Pesan
+                        Layanan <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. How It Works -->
+    <section id="how-it-works" class="py-20 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Cara Kerja Easy Clean</h2>
+                <p class="text-gray-600 text-lg">Laundry tanpa ribet hanya dalam 4 langkah mudah.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 relative">
+                <!-- Desktop connecting line -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-100 -z-10 -translate-y-1/2">
+                </div>
+
+                <!-- Step 1 -->
+                <div class="bg-white p-6 rounded-2xl text-center z-10 w-full md:w-1/4 shadow-soft">
+                    <div
+                        class="w-16 h-16 mx-auto bg-gradient-to-br from-primary to-primaryDark text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 shadow-lg">
+                        1</div>
+                    <h3 class="font-bold text-gray-900 mb-2">Pilih Layanan</h3>
+                    <p class="text-gray-500 text-sm">Pilih jenis layanan laundry yang Anda butuhkan di website kami.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white p-6 rounded-2xl text-center z-10 w-full md:w-1/4 shadow-soft">
+                    <div
+                        class="w-16 h-16 mx-auto bg-gradient-to-br from-primary to-primaryDark text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 shadow-lg">
+                        2</div>
+                    <h3 class="font-bold text-gray-900 mb-2">Jadwalkan Pickup</h3>
+                    <p class="text-gray-500 text-sm">Isi form request, kurir kami akan menjemput ke lokasi Anda.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-6 rounded-2xl text-center z-10 w-full md:w-1/4 shadow-soft">
+                    <div
+                        class="w-16 h-16 mx-auto bg-gradient-to-br from-primary to-primaryDark text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 shadow-lg">
+                        3</div>
+                    <h3 class="font-bold text-gray-900 mb-2">Proses Laundry</h3>
+                    <p class="text-gray-500 text-sm">Pakaian Anda dicuci dan diproses oleh tenaga profesional kami.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white p-6 rounded-2xl text-center z-10 w-full md:w-1/4 shadow-soft">
+                    <div
+                        class="w-16 h-16 mx-auto bg-gradient-to-br from-primary to-primaryDark text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 shadow-lg">
+                        4</div>
+                    <h3 class="font-bold text-gray-900 mb-2">Pakaian Dikirim</h3>
+                    <p class="text-gray-500 text-sm">Pakaian bersih, wangi, dan rapi dikirim kembali ke depan pintu
+                        Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Why Choose Easy Clean -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Kenapa Memilih Easy Clean?</h2>
+                    <p class="text-gray-600 text-lg mb-8">Kami berkomitmen memberikan layanan laundry terbaik dengan
+                        standar kebersihan tinggi dan pelayanan yang memudahkan hidup Anda.</p>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 bg-green-100 text-green-600 rounded-full p-1"><i
+                                    class="fa-solid fa-check text-sm w-4 h-4 flex items-center justify-center"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Pickup & Delivery Praktis</h4>
+                                <p class="text-gray-500 text-sm">Hemat waktu Anda, biarkan kami yang menjemput dan
+                                    mengantar.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 bg-green-100 text-green-600 rounded-full p-1"><i
+                                    class="fa-solid fa-check text-sm w-4 h-4 flex items-center justify-center"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Proses Laundry Profesional</h4>
+                                <p class="text-gray-500 text-sm">Menggunakan deterjen premium dan mesin berteknologi
+                                    tinggi.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 bg-green-100 text-green-600 rounded-full p-1"><i
+                                    class="fa-solid fa-check text-sm w-4 h-4 flex items-center justify-center"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Komunikasi Cepat via WhatsApp</h4>
+                                <p class="text-gray-500 text-sm">Layanan pelanggan responsif siap membantu Anda kapan
+                                    saja.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 bg-green-100 text-green-600 rounded-full p-1"><i
+                                    class="fa-solid fa-check text-sm w-4 h-4 flex items-center justify-center"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Cocok untuk Rumah, Apartemen, & Bisnis</h4>
+                                <p class="text-gray-500 text-sm">Layanan fleksibel sesuai dengan kebutuhan Anda.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <div class="aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative">
+                        <img src="profesional.jpeg" alt="Proses Laundry Profesional"
+                            class="w-full h-full object-cover hover:scale-105 transition duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Estimasi Layanan Kami</h2>
+                <p class="text-gray-600 text-lg">Harga menyesuaikan jenis layanan dan volume laundry.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Pricing 1 -->
+                <div class="bg-gray-50 rounded-3xl p-8 border border-gray-100 flex flex-col hover-card-transition">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Daily Laundry</h3>
+                    <p class="text-gray-500 text-sm mb-6 h-10">Cocok untuk pakaian harian keluarga Anda.</p>
+                    <ul class="space-y-3 mb-8 flex-1">
+                        <li class="flex items-center gap-3 text-gray-600 text-sm"><i
+                                class="fa-solid fa-check text-primary"></i> Untuk pakaian harian</li>
+                        <li class="flex items-center gap-3 text-gray-600 text-sm"><i
+                                class="fa-solid fa-check text-primary"></i> Wash & Fold</li>
+                        <li class="flex items-center gap-3 text-gray-600 text-sm"><i
+                                class="fa-solid fa-check text-primary"></i> Pickup sesuai jadwal</li>
+                    </ul>
+                    <a href="https://wa.me/6287878851973?text=Halo%20Admin%2C%20saya%20ingin%20tanya%20harga%20untuk%20Daily%20Laundry."
+                        target="_blank"
+                        class="block w-full py-3 px-4 bg-white border border-primary text-primary text-center rounded-xl font-semibold hover:bg-primary hover:text-white transition duration-300">Tanya
+                        Harga</a>
+                </div>
+
+                <!-- Pricing 2 -->
+                <div
+                    class="bg-gradient-to-b from-primary to-primaryDark rounded-3xl p-8 shadow-xl flex flex-col relative transform md:-translate-y-4">
+                    <div
+                        class="absolute top-0 right-0 bg-yellow-400 text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-3xl text-yellow-900 uppercase tracking-wide">
+                        Popular</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Premium Care</h3>
+                    <p class="text-blue-100 text-sm mb-6 h-10">Perawatan khusus untuk pakaian favorit Anda.</p>
+                    <ul class="space-y-3 mb-8 flex-1">
+                        <li class="flex items-center gap-3 text-white text-sm"><i
+                                class="fa-solid fa-check text-yellow-300"></i> Untuk dry cleaning</li>
+                        <li class="flex items-center gap-3 text-white text-sm"><i
+                                class="fa-solid fa-check text-yellow-300"></i> Jas, blazer, dress</li>
+                        <li class="flex items-center gap-3 text-white text-sm"><i
+                                class="fa-solid fa-check text-yellow-300"></i> Delicate garment</li>
+                    </ul>
+                    <a href="https://wa.me/6287878851973?text=Halo%20Admin%2C%20saya%20ingin%20konsultasi%20untuk%20Premium%20Care."
+                        target="_blank"
+                        class="block w-full py-3 px-4 bg-white text-primary text-center rounded-xl font-bold hover:bg-gray-50 transition duration-300 shadow-md">Konsultasi</a>
+                </div>
+
+                <!-- Pricing 3 -->
+                <div class="bg-gray-50 rounded-3xl p-8 border border-gray-100 flex flex-col hover-card-transition">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Business Laundry</h3>
+                    <p class="text-gray-500 text-sm mb-6 h-10">Solusi laundry terpercaya untuk bisnis Anda.</p>
+                    <ul class="space-y-3 mb-8 flex-1">
+                        <li class="flex items-center gap-3 text-gray-600 text-sm"><i
+                                class="fa-solid fa-check text-primary"></i> Kantor, gym, salon, spa</li>
+                        <li class="flex items-center gap-3 text-gray-600 text-sm"><i
+                                class="fa-solid fa-check text-primary"></i> Hotel kecil & properti</li>
+                        <li class="flex items-center gap-3 text-gray-600 text-sm"><i
+                                class="fa-solid fa-check text-primary"></i> Jadwal pickup rutin</li>
+                    </ul>
+                    <a href="https://wa.me/6287878851973?text=Halo%20Admin%2C%20saya%20ingin%20request%20quotation%20untuk%20Business%20Laundry."
+                        target="_blank"
+                        class="block w-full py-3 px-4 bg-white border border-primary text-primary text-center rounded-xl font-semibold hover:bg-primary hover:text-white transition duration-300">Request
+                        Quotation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Laundry Lockers Section -->
+    <section id="lockers" class="py-20 bg-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1 relative">
+                    <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl relative">
+                        <img src="customer.jpeg" alt="Pelanggan Easy Clean"
+                            class="w-full h-full object-cover hover:scale-105 transition duration-700">
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <span class="text-secondary font-semibold uppercase tracking-wider text-sm">Smart Facility</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">Laundry Lockers untuk Apartemen &
+                        Gedung</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">Fasilitas smart locker kami memberikan kemudahan akses
+                        24/7 bagi penghuni apartemen atau gedung perkantoran untuk menaruh dan mengambil laundry tanpa
+                        harus bertemu kurir.</p>
+
+                    <div class="grid sm:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-white p-5 rounded-2xl shadow-sm">
+                            <h4 class="font-bold text-gray-900 mb-2 flex items-center gap-2"><i
+                                    class="fa-solid fa-users text-primary"></i> Bagi Penghuni</h4>
+                            <p class="text-sm text-gray-500">Akses fleksibel, aman, dan tanpa kontak. Notifikasi
+                                otomatis saat pakaian selesai.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl shadow-sm">
+                            <h4 class="font-bold text-gray-900 mb-2 flex items-center gap-2"><i
+                                    class="fa-solid fa-building text-primary"></i> Bagi Manajemen</h4>
+                            <p class="text-sm text-gray-500">Meningkatkan fasilitas gedung tanpa biaya tambahan
+                                operasional.</p>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/6287878851973?text=Halo%20Admin%2C%20saya%20ingin%20konsultasi%20tentang%20pemasangan%20Smart%20Locker."
+                        target="_blank"
+                        class="inline-flex items-center gap-2 bg-secondary text-white px-6 py-3 rounded-full font-semibold hover:bg-teal-600 transition">
+                        Konsultasi Smart Locker <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Commercial Laundry Section -->
+    <section id="business" class="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="kering.jpeg" alt="Commercial Laundry Background"
+                class="w-full h-full object-cover opacity-20 mix-blend-overlay">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Mitra Laundry untuk Bisnis Anda</h2>
+                <p class="text-gray-400 text-lg">Layanan andal dengan kapasitas besar untuk mendukung kelancaran
+                    operasional bisnis hospitality dan komersial Anda.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <div
+                    class="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition">
+                    <i class="fa-solid fa-briefcase text-3xl text-primary mb-3"></i>
+                    <h4 class="font-semibold">Kantor</h4>
+                </div>
+                <div
+                    class="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition">
+                    <i class="fa-solid fa-dumbbell text-3xl text-primary mb-3"></i>
+                    <h4 class="font-semibold">Gym & Fitness</h4>
+                </div>
+                <div
+                    class="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition">
+                    <i class="fa-solid fa-scissors text-3xl text-primary mb-3"></i>
+                    <h4 class="font-semibold">Salon & Spa</h4>
+                </div>
+                <div
+                    class="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition">
+                    <i class="fa-solid fa-hotel text-3xl text-primary mb-3"></i>
+                    <h4 class="font-semibold">Hotel Kecil</h4>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="#contact"
+                    class="inline-block bg-white text-gray-900 px-8 py-4 rounded-full font-bold hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:-translate-y-1 transition duration-300">
+                    Request Commercial Laundry
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Apa Kata Mereka?</h2>
+                <p class="text-gray-600">Pelanggan yang telah mempercayakan pakaian mereka kepada Easy Clean.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-3xl relative">
+                    <div class="text-yellow-400 mb-4 flex gap-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Sangat terbantu! Saya tidak perlu lagi pusing memikirkan
+                        cucian numpuk di akhir pekan. Kurirnya on time dan bajunya wangi banget."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center font-bold text-primary">
+                            A</div>
+                        <div>
+                            <h5 class="font-bold text-gray-900">Anita</h5>
+                            <p class="text-xs text-gray-500">Ibu Rumah Tangga</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-3xl relative">
+                    <div class="text-yellow-400 mb-4 flex gap-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Fitur smart locker di apartemen saya benar-benar game changer.
+                        Saya bisa drop baju jam 11 malam sepulang kerja tanpa repot."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-teal-200 rounded-full flex items-center justify-center font-bold text-secondary">
+                            D</div>
+                        <div>
+                            <h5 class="font-bold text-gray-900">Dimas</h5>
+                            <p class="text-xs text-gray-500">Penghuni Apartemen</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-3xl relative">
+                    <div class="text-yellow-400 mb-4 flex gap-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Untuk operasional salon kami, Easy Clean sangat bisa
+                        diandalkan. Handuk selalu bersih, putih, dan tepat waktu pengirimannya."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-purple-200 rounded-full flex items-center justify-center font-bold text-purple-600">
+                            S</div>
+                        <div>
+                            <h5 class="font-bold text-gray-900">Siska</h5>
+                            <p class="text-xs text-gray-500">Pemilik Salon & Spa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Pertanyaan Seputar Easy Clean</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden">
+                    <button
+                        class="faq-question w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-gray-800">Bagaimana cara menggunakan layanan Easy Clean?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon text-gray-400"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-gray-50">
+                        <p class="py-4 text-gray-600 text-sm">Sangat mudah! Anda cukup mengisi form request pickup di
+                            website ini, atau langsung hubungi kami via WhatsApp. Kami akan menjemput pakaian,
+                            membersihkannya, dan mengantarkannya kembali.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden">
+                    <button
+                        class="faq-question w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-gray-800">Apakah saya harus berada di rumah saat pickup?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon text-gray-400"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-gray-50">
+                        <p class="py-4 text-gray-600 text-sm">Jika Anda berada di apartemen dengan fasilitas Smart
+                            Locker kami, Anda tidak perlu berada di tempat. Jika reguler, kami menyarankan ada yang
+                            menyerahkan pakaian, atau Anda bisa menitipkannya pada pihak keamanan atas kesepakatan.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden">
+                    <button
+                        class="faq-question w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-gray-800">Apakah bisa menghubungi admin lewat WhatsApp?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon text-gray-400"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-gray-50">
+                        <p class="py-4 text-gray-600 text-sm">Tentu saja. Anda bisa klik tombol WhatsApp melayang di
+                            pojok kanan bawah, atau klik tombol "Hubungi WhatsApp" pada halaman ini.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden">
+                    <button
+                        class="faq-question w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-gray-800">Apakah bisa mengirim request melalui email?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon text-gray-400"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-gray-50">
+                        <p class="py-4 text-gray-600 text-sm">Bisa. Pada form request pickup di bagian bawah, Anda bisa
+                            memilih tombol "Kirim via Email" dan sistem akan membuatkan draft email untuk Anda.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden">
+                    <button
+                        class="faq-question w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-gray-800">Apakah Easy Clean melayani laundry bisnis?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon text-gray-400"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-gray-50">
+                        <p class="py-4 text-gray-600 text-sm">Ya, kami melayani commercial laundry untuk kantor, gym,
+                            salon, spa, klinik, dan hotel kecil dengan tarif khusus dan jadwal rutin.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item bg-white border border-gray-200 rounded-2xl overflow-hidden">
+                    <button
+                        class="faq-question w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-gray-800">Apakah ada layanan smart locker?</span>
+                        <i class="fa-solid fa-chevron-down faq-icon text-gray-400"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-gray-50">
+                        <p class="py-4 text-gray-600 text-sm">Ya, kami menyediakan instalasi smart locker untuk
+                            apartemen dan gedung. Hubungi kami untuk konsultasi pemasangan loker di properti Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Contact / Schedule Pickup Section -->
+    <section id="contact" class="py-20 bg-white relative">
+        <div class="absolute left-0 top-0 w-1/3 h-full bg-blue-50 hidden lg:block rounded-r-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden">
+                <div class="grid lg:grid-cols-5">
+                    <!-- Contact Info -->
+                    <div
+                        class="lg:col-span-2 bg-gradient-to-br from-primary to-primaryDark text-white p-10 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-3xl font-bold mb-4">Mulai Jadwalkan Laundry Anda</h3>
+                            <p class="text-blue-100 mb-8 leading-relaxed">Isi form di samping untuk menjadwalkan pickup.
+                                Kurir kami akan segera mengkonfirmasi pesanan Anda.</p>
+
+                            <div class="space-y-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"><i
+                                            class="fa-solid fa-phone"></i></div>
+                                    <div>
+                                        <p class="text-xs text-blue-200">WhatsApp</p>
+                                        <p class="font-semibold">0878-7885-1973</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"><i
+                                            class="fa-solid fa-envelope"></i></div>
+                                    <div>
+                                        <p class="text-xs text-blue-200">Email</p>
+                                        <p class="font-semibold">ghanis.tantiono73@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"><i
+                                            class="fa-solid fa-clock"></i></div>
+                                    <div>
+                                        <p class="text-xs text-blue-200">Jam Operasional</p>
+                                        <p class="font-semibold">08:00 - 20:00 (Setiap Hari)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 hidden lg:block text-center">
+                            <img src="seterika.png" alt="Seterika Laundry"
+                                class="w-56 mx-auto opacity-90 drop-shadow-xl hover:-translate-y-2 transition duration-500">
+                        </div>
+                    </div>
+
+                    <!-- Form -->
+                    <div class="lg:col-span-3 p-10 lg:p-12">
+                        <h4 class="text-2xl font-bold text-gray-900 mb-6">Form Request Pickup</h4>
+                        <form id="pickup-form" class="space-y-5">
+                            <!-- Note for user: the user asked to create a google sheet file for recording. Since this is an html form sending via WA/Email, a separate backend or tools like Google Forms / Zapier is needed to auto-fill a sheet. -->
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap *</label>
+                                    <input type="text" id="nama"
+                                        class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
+                                        placeholder="Masukkan nama" required>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Nomor WhatsApp *</label>
+                                    <input type="tel" id="whatsapp"
+                                        class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
+                                        placeholder="Contoh: 0812..." required>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                    <input type="email" id="email"
+                                        class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
+                                        placeholder="Untuk notifikasi (opsional)">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Jenis Layanan *</label>
+                                    <select id="layanan"
+                                        class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition bg-white"
+                                        required>
+                                        <option value="" disabled selected>Pilih Layanan</option>
+                                        <option value="Wash & Fold">Wash & Fold</option>
+                                        <option value="Dry Cleaning">Dry Cleaning</option>
+                                        <option value="Shoe Cleaning">Shoe Cleaning</option>
+                                        <option value="Bedding & Linen">Bedding & Linen</option>
+                                        <option value="Commercial">Commercial / Bisnis</option>
+                                        <option value="Lainnya">Lainnya (Tulis di Catatan)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Alamat Lengkap Pickup
+                                    *</label>
+                                <textarea id="alamat" rows="2"
+                                    class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
+                                    placeholder="Alamat rumah / apartemen (beserta nomor unit)" required></textarea>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Tanggal Pickup</label>
+                                    <input type="date" id="tanggal"
+                                        class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Jam Pickup</label>
+                                    <input type="time" id="jam"
+                                        class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Catatan Tambahan</label>
+                                <textarea id="catatan" rows="2"
+                                    class="w-full px-4 py-2.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition"
+                                    placeholder="Ada instruksi khusus untuk cucian Anda?"></textarea>
+                            </div>
+
+                            <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                                <button id="btn-wa"
+                                    class="flex-1 bg-[#25D366] text-white py-3 px-4 rounded-xl font-bold hover:bg-[#128C7E] hover:shadow-lg transition flex justify-center items-center gap-2">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i> Kirim via WhatsApp
+                                </button>
+                                <button id="btn-email"
+                                    class="flex-1 bg-gray-800 text-white py-3 px-4 rounded-xl font-bold hover:bg-gray-900 hover:shadow-lg transition flex justify-center items-center gap-2">
+                                    <i class="fa-solid fa-envelope text-lg"></i> Kirim via Email
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Brand Info -->
+                <div>
+                    <a href="#" class="text-2xl font-bold text-white flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-soap text-primary"></i> Easy Clean
+                    </a>
+                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+                        Layanan laundry digital modern yang memudahkan Anda untuk merawat pakaian tanpa repot. Kami
+                        jemput, kami bersihkan, kami antar.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition"><i
+                                class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-primary transition">Home</a></li>
+                        <li><a href="#how-it-works" class="hover:text-primary transition">Cara Kerja</a></li>
+                        <li><a href="#pricing" class="hover:text-primary transition">Harga Layanan</a></li>
+                        <li><a href="#faq" class="hover:text-primary transition">FAQ</a></li>
+                        <li><a href="#contact" class="hover:text-primary transition">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#services" class="hover:text-primary transition">Wash & Fold</a></li>
+                        <li><a href="#services" class="hover:text-primary transition">Dry Cleaning</a></li>
+                        <li><a href="#services" class="hover:text-primary transition">Shoe Care</a></li>
+                        <li><a href="#lockers" class="hover:text-primary transition">Smart Lockers</a></li>
+                        <li><a href="#business" class="hover:text-primary transition">Commercial Laundry</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Hubungi Admin</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-brands fa-whatsapp mt-1 text-primary"></i>
+                            <div>
+                                <p class="text-gray-400">WhatsApp</p>
+                                <a href="https://wa.me/6287878851973"
+                                    class="text-white hover:text-primary transition">0878-7885-1973</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-envelope mt-1 text-primary"></i>
+                            <div>
+                                <p class="text-gray-400">Email</p>
+                                <a href="mailto:ghanis.tantiono73@gmail.com"
+                                    class="text-white hover:text-primary transition">ghanis.tantiono73@gmail.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2024 Easy Clean Laundry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 14. Floating WhatsApp Button -->
+    <div class="floating-wa">
+        <a href="https://wa.me/6287878851973?text=Halo%20Admin%20Easy%20Clean%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20laundry."
+            target="_blank" class="floating-wa-btn" aria-label="Chat WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
